@@ -22,7 +22,7 @@ body {
 .header__links-list {
 	display: inline-flex;
 	justify-content: space-between;
-	width: 392px;
+	min-width: 392px;
 }
 
 .header__links-list-item {
@@ -50,9 +50,7 @@ body {
 }
 
 .header__address {
-	display: grid;
 	align-self: center;
-	width: 240px;
 	margin-left: 30px;
 }
 
@@ -73,7 +71,7 @@ body {
 	padding-bottom: 50px;
 	color: #fff;
 	text-transform: uppercase;
-	background-image: url(../images/cover.jpg);
+	background: url(../images/cover.jpg);
 	background-position: center;
 	background-size: cover;
 }
@@ -93,40 +91,37 @@ body {
 	padding: 165px 50px 135px;
 }
 
-.ono, .tebe, .nado {
+.text-align-left, .text-align-center, .text-align-right {
 	display: flex;
 	font-weight: bold;
 	font-size: 100px;
 	letter-spacing: .3em;
 }
 
-.ono {
+.text-align-left {
 	line-height: 1.15em;
 }
 
-.ono span, .tebe span, .nado span {
+.text-align-left span, .text-align-center span, .text-align-right span {
 	letter-spacing: .6em;
 }
 
-.tebe {
-	
-	position: relative; /* для pixel perfect. Почему-то в макете  слово "тебе" стоит
-											не совсем по центру */
-	left: -14px;
+.text-align-center {
 	justify-content: center;
+	padding-right: 28px; /*pixel perfect*/
 	line-height: 1em;
 }
 
-.nado {
+.text-align-right {
 	justify-content: end;
 	line-height: 1em;
 }
 
-.nado span + span {
+.text-align-right span + span {
 	letter-spacing: 0;
 }
 
-.h1 span, .welcome-section__p, button, .lot-title, .lot p {
+.h1 > span, .welcome-section__p, .button, .lot-title, .lot p {
 	z-index: 1;
 }
 
@@ -209,15 +204,15 @@ body {
 }
 
 .lot.card_type_film {
-	background-image: url(../images/card-lot-01.jpg);
+	background: url(../images/card-lot-01.jpg);
 }
 
 .lot.card_type_book {
-	background-image: url(../images/card-lot-02.jpg);
+	background: url(../images/card-lot-02.jpg);
 }
 
 .lot.card_type_picture {
-	background-image: url(../images/card-lot-03.jpg);
+	background: url(../images/card-lot-03.jpg);
 }
 
 .lot.card_type_film, .lot.card_type_book, .lot.card_type_picture {
@@ -240,6 +235,14 @@ body {
 	padding: 0 24px 184px;
 }
 
+.about-logo-container {
+	display: flex;
+	flex-direction: column;
+	width: 334px;
+	min-height: 563px;
+	padding: 51px 40px 48px;
+}
+
 .about-logo {
 	display: flex;
 	justify-content: center;
@@ -249,7 +252,6 @@ body {
 	height: 240px;
 	border-radius: 120px;
 	background: #000;
-
 }
 
 .about-logo-image {
@@ -286,11 +288,13 @@ body {
 }
 
 .footer__menu-list {
-	position: relative; /* pixel perfect */
-	left: 20px;
+	/* Как можно вместо паддингов выставить этот элемент
+		чётко по центру контейнера? заменить flexbox на grid-контейнер
+		и использовать свойство justify-self? */
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	padding-left: 38px; /* pixel perfect */
 	list-style: none;
 }
 
