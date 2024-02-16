@@ -96,6 +96,7 @@ body {
 	font-weight: bold;
 	font-size: 100px;
 	letter-spacing: .3em;
+	line-height: 1.15em;
 }
 
 .text-align-center {
@@ -103,6 +104,9 @@ body {
 	font-weight: bold;
 	font-size: 100px;
 	letter-spacing: .3em;
+	justify-content: center;
+	padding-right: 28px; /*pixel perfect*/
+	line-height: 1em;
 }
 
 .text-align-right {
@@ -110,10 +114,8 @@ body {
 	font-weight: bold;
 	font-size: 100px;
 	letter-spacing: .3em;
-}
-
-.text-align-left {
-	line-height: 1.15em;
+	justify-content: end;
+	line-height: 1em;
 }
 
 .text-align-left span {
@@ -128,17 +130,6 @@ body {
 	letter-spacing: .6em;
 }
 
-.text-align-center {
-	justify-content: center;
-	padding-right: 28px; /*pixel perfect*/
-	line-height: 1em;
-}
-
-.text-align-right {
-	justify-content: end;
-	line-height: 1em;
-}
-
 .text-align-right span + span {
 	letter-spacing: 0;
 }
@@ -149,10 +140,18 @@ body {
 
 .welcome-section__p {
 	z-index: 1;
+	line-height: 28px;
+	word-spacing: .84em;
 }
 
 .button {
 	z-index: 1;
+	border: 1px #fff solid;
+	padding: 12px 32px;
+	color: #fff;
+	font-size: 22px;
+	text-transform: uppercase;
+	background-color: transparent;
 }
 
 .lot-title {
@@ -169,20 +168,6 @@ body {
 	align-items: center;
 	padding: 0 50px 0 78px;
 	font-size: 22px;
-}
-
-.welcome-section__p {
-	line-height: 28px;
-	word-spacing: .84em;
-}
-
-.button {
-	border: 1px #fff solid;
-	padding: 12px 32px;
-	color: #fff;
-	font-size: 22px;
-	text-transform: uppercase;
-	background-color: transparent;
 }
 
 .lots {
@@ -243,27 +228,18 @@ body {
 
 .lot.card_type_film {
 	background: url(../images/card-lot-01.jpg);
+	background-position: center;
+	background-size: cover;
 }
 
 .lot.card_type_book {
 	background: url(../images/card-lot-02.jpg);
+	background-position: center;
+	background-size: cover;
 }
 
 .lot.card_type_picture {
 	background: url(../images/card-lot-03.jpg);
-}
-
-.lot.card_type_film {
-	background-position: center;
-	background-size: cover;
-}
-
-.lot.card_type_book {
-	background-position: center;
-	background-size: cover;
-}
-
-.lot.card_type_picture {
 	background-position: center;
 	background-size: cover;
 }
